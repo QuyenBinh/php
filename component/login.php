@@ -11,7 +11,7 @@
     <div class="left-side">
         <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/64ef8d9a-9202-4543-b838-82f4c7c91ccf" alt="" />
     </div>
-    <form id = "loginForm" method="POST">
+    <form id = "loginForm" method="POST" action="loginForm.php">
         <div class="btn-group">
             <button class="btn">
                 <img class="logo" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d1c98974-c62d-4071-8bd2-ab859fc5f4e9" alt="" />
@@ -35,10 +35,10 @@
                 name="password"
                 required />
         <span id = "message" style="color: red"></span>
-        <button type="button" class="login-btn" name ="login" id = "login" onclick="submitForm()">Sign in</button>
+        <button type="submit" class="login-btn" name ="login" id = "login" onclick="">Sign in</button>
         <div class="links">
             <a href="#">Forgot password?</a>
-            <a href="#">Do not have an account?</a>
+            <a href="register.php">Do not have an account?</a>
         </div>
     </form>
 </main>
@@ -60,75 +60,16 @@
                         console.log("1")
                         document.getElementById("message").innerHTML = data.message;
                     } else {
-                        document.getElementById("passwordConfirmError").style.display = 'hidden';
+                        document.getElementById("message").hidden = true;
                     }
+                } else {
+                    console.log("chuyen trang");
+                    // location.href = "../index.php?page=index"
                 }
             })
             .catch(error => {
-                location.href = " ../index.php"
+                console.log("chuyen trang");
+                // location.href = "../index.php?page=index"
             });
     }
-</script>
-
-<script>
-    particlesJS("particles-js", {
-        particles: {
-            number: {
-                value: 300,
-                density: {
-                    enable: true,
-                    value_area: 800,
-                },
-            },
-            color: {
-                value: "#fff",
-            },
-            shape: {
-                type: "circle",
-                stroke: {
-                    width: 0,
-                    color: "#000000",
-                },
-                polygon: {
-                    nb_sides: 5,
-                },
-            },
-            opacity: {
-                value: 1,
-                random: false,
-                anim: {
-                    enable: false,
-                    speed: 1,
-                    opacity_min: 0.1,
-                    sync: false,
-                },
-            },
-            size: {
-                value: 3,
-                random: true,
-                anim: {
-                    enable: false,
-                },
-            },
-            line_linked: {
-                enable: false,
-            },
-            move: {
-                enable: true,
-                speed: 2,
-                direction: "bottom",
-                random: false,
-                straight: false,
-                out_mode: "out",
-                bounce: false,
-                attract: {
-                    enable: false,
-                    rotateX: 600,
-                    rotateY: 1200,
-                },
-            },
-        },
-        retina_detect: true,
-    });
-
 </script>

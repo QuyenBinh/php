@@ -9,7 +9,7 @@
 
 .menu a {
   color: #090909 !important;
-  font-weight: 700;
+  font-weight: 500;
   padding: 0 !important;
 }
 .carousel-indicators li {
@@ -84,4 +84,7 @@
 }
 .style_name_prouct {
   height: 40px;
+}
+.dropdown-menu a{
+  padding: 10px 0 !important;
 }

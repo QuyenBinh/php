@@ -11,7 +11,7 @@
         <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/64ef8d9a-9202-4543-b838-82f4c7c91ccf"
              alt=""/>
     </div>
-    <form id="rgForm" method="POST" >
+    <form id="rgForm" method="POST" action="registerForm.php">
         <div class="btn-group">
             <button class="btn">
                 <img class="logo"
@@ -52,10 +52,14 @@
                 required/>
         <span id = "passwordConfirmError" style="color: red"></span>
         </div>
-        <button type="button" class="login-btn" onclick="submitForm()">Signup</button>
+
+        <div>
+            <span id = "emailDuplicate" style="color: red"></span>
+        </div>
+        <button type="submit" class="login-btn" onclick="">Signup</button>
         <div class="links">
             <a href="#">Forgot password?</a>
-            <a href="#">Do not have an account?</a>
+            <a href="login.php">Signin</a>
         </div>
     </form>
     <div id="results"></div>
@@ -79,24 +83,32 @@
                         console.log("1")
                         document.getElementById("passwordConfirmError").innerHTML = data.passwordConfirmError;
                     } else {
-                        document.getElementById("passwordConfirmError").style.display = 'hidden';
+                        document.getElementById("passwordConfirmError").hidden = true;
                     }
                     if (data.emailError) {
                         console.log("2")
                         document.getElementById("emailError").innerHTML = data.emailError;
                     } else {
-                        document.getElementById("emailError").style.display = 'hidden';
+                        document.getElementById("emailError").hidden = true;
                     }
                     if (data.passwordValidate) {
                         console.log("3")
                         document.getElementById("passwordValidate").innerHTML = data.passwordValidate;
                     } else {
-                        document.getElementById("passwordValidate").style.display = 'hidden';
+                        document.getElementById("passwordValidate").hidden = true;
                     }
+                    if (data.emailDuplicate) {
+                        console.log("4")
+                        document.getElementById("emailDuplicate").innerHTML = data.emailDuplicate;
+                    } else {
+                        document.getElementById("emailDuplicate").hidden = true;
+                    }
+                } else {
+                     location.href = "login.php?page=login"
                 }
             })
             .catch(error => {
-                // location.href = "login.php"
+                  location.href = "login.php?page=login"
             });
     }
 </script>

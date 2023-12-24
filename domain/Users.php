@@ -3,15 +3,16 @@
 class Users
 {
     private $name;
-    private $password;
     private $email;
+    private $id;
 
-    function __construct($name, $password, $email)
+    function __construct($id, $name, $email)
     {
-        $this->$name = $name;
-        $this->$password = $password;
-        $this->$email = $email;
+        $this->id = $id;
+        $this->name = $name;
+        $this->email = $email;
     }
+
 }
 
 ?>
