@@ -1,0 +1,87 @@
+.language {
+  padding: 0 0.41667rem;
+}
+.language .lg {
+  color: #090909;
+  padding-right: 10px;
+  border-right: solid 1px;
+}
+
+.menu a {
+  color: #090909 !important;
+  font-weight: 700;
+  padding: 0 !important;
+}
+.carousel-indicators li {
+  width: 10px !important;
+  height: 10px !important;
+}
+.carousel-indicators .active li {
+  height: 10px !important;
+}
+.main {
+  margin: 50px 0;
+}
+.module {
+  margin: 50px 0;
+}
+.section {
+  margin: 0;
+  padding: 0 10%;
+}
+.field__content__item {
+  display: flex;
+  width: 100%;
+}
+.field__item__thumb {
+  padding: 10px;
+}
+.field__content__items {
+  border-radius: 10px;
+  background: #ffffff;
+  margin: 20px;
+  text-align: center;
+}
+.module-1408 {
+  display: flex;
+}
+.text-content-1 {
+  margin-left: 20px;
+  align-self: center;
+}
+.ads-button {
+  background: #ffffff;
+  border: solid 1px #21409a;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.section-ads {
+  background-image: url("https://www.duytan.com/Data/Sites/1/media/backround/home-bg.png");
+}
+.main-style {
+  padding: 0 10%;
+}
+.items-start {
+  margin-top: 50px;
+}
+.marign-style {
+  margin: 50px 0;
+}
+.item-ads {
+  padding: 25px 5px;
+}
+.menu-event {
+  display: flex;
+}
+.menu-event li {
+  padding: 0 20px;
+}
+.tab-content {
+  margin-top: 20px;
+}
+.text-header-color {
+  color: #21409a;
+}
+.style_name_prouct {
+  height: 40px;
+}
